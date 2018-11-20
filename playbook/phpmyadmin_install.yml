@@ -1,0 +1,7 @@
+- hosts: PMA
+  become: yes
+  roles:
+     - nginx
+     - php
+     - phpfpm
+     - phpmyadmin

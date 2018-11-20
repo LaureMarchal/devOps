@@ -1,0 +1,11 @@
+- yum:
+    name: "php72-fpm"
+    state: latest
+
+- template:
+    src: ../templates/www.conf
+    dest: /etc/php-fpm.d/www.conf
+
+- service:
+    name: php-fpm
+    state: started

@@ -1,0 +1,10 @@
+- yum:
+    name: "php72-mysqlnd"
+    state: present
+
+- unarchive: 
+    src: https://files.phpmyadmin.net/phpMyAdmin/4.8.3/phpMyAdmin-4.8.3-all-languages.tar.gz
+    dest: /var/www/html
+    remote_src: yes
+
+- command: mv /var/www/html/phpMyAdmin-4.8.3-all-languages /var/www/html/phpmyadmin
